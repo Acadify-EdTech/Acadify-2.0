@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Acadify</string>
+    <string name="title_activity_main">Acadify</string>
+    <string name="package_name">com.acadify.app</string>
+    <string name="custom_url_scheme">com.acadify.app</string>
+</resources>

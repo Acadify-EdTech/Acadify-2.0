@@ -1,0 +1,13 @@
+{
+  "appId": "com.acadify.app",
+  "appName": "Acadify",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1000
+    }
+  },
+  "cordova": {}
+}

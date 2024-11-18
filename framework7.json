@@ -1,0 +1,27 @@
+{
+  "cwd": "C:\\Users\\Administrator\\Documents\\Acadify-2.0",
+  "type": [
+    "pwa",
+    "web",
+    "capacitor"
+  ],
+  "name": "Frontend",
+  "framework": "react",
+  "template": "single-view",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": true,
+    "color": "#ffb689",
+    "darkMode": true,
+    "iconFonts": true
+  },
+  "customBuild": false,
+  "pkg": "com.acadify.app",
+  "capacitor": {
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}
