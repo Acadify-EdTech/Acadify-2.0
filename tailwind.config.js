@@ -4,4 +4,12 @@ module.exports = {
     },
     plugins: [],
     prefix: "tw-",
+    theme:{
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+        mono: ['Roboto Mono', 'monospace'],
+        cr: ['Croissant One', 'cursive'],
+      },
+    }
   }

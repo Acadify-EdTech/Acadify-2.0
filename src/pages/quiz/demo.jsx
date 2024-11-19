@@ -29,7 +29,7 @@ function QuizDemo() {
       <Navbar title="Quiz Demo" backLink="Back" />
       <div className="grid medium-grid-cols-4 grid-cols-2">
         {subjects.map((subject, index) => (
-          <Card expandable key={index} style={{height: '100px'}}>
+          <Card expandable key={index} style={{ height: "100px" }}>
             <CardContent padding={false}>
               {/* Card Header with subject name and dynamic background color */}
               <div

@@ -244,11 +244,20 @@ export default function QuizPage() {
   };
 
   // Submit quiz
-  const handleSubmitQuiz = () => {
-    f7.dialog.confirm('Do you want to submit the Quiz?', () => {
-      f7.dialog.alert('Great!');
+const handleSubmitQuiz = () => {
+  f7.dialog.confirm('Do you want to submit the Quiz?', () => {
+    const correctAnswers = quizData.reduce((total, question, index) => {
+      return question.correctAnswer === userAnswers[index] ? total + 1 : total;
+    }, 0);
+    const score = (correctAnswers / quizData.length) * 100;
+    f7.dialog.alert(`You scored ${score.toFixed(2)}%`, () => {
+      f7.views.main.router.clearPreviousHistory()
+      f7.views.main.router.navigate("/", {
+        reloadCurrent: true,
+      });      
     });
-  };
+  });
+};
 
   // Timer effect
   useEffect(() => {
