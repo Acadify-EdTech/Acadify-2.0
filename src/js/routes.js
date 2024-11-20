@@ -36,7 +36,7 @@ var routes = [
   },
   {
     path: '/home/',
-    component: Landing,
+    component: LandingPage,
   },
 
   {
