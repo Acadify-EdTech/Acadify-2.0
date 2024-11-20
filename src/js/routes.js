@@ -10,12 +10,14 @@ import NotFoundPage from '../pages/404.jsx';
 
 import QuizDemo from '../pages/quiz/demo.jsx';
 import QuizPage from '../pages/quiz/quizpage.jsx';
-import LandingPage from '../pages/landingpage.jsx';
+import GetStartedPage from '../pages/getstarted.jsx';
+import LoginPage from '../pages/login.jsx';
+import SignupPage from '../pages/signup.jsx';
 
 var routes = [
   {
     path: '/',
-    component: HomePage,
+    component: GetStartedPage,
   },
   {
     path: '/about/',
@@ -36,7 +38,15 @@ var routes = [
   },
   {
     path: '/home/',
-    component: LandingPage,
+    component: HomePage,
+  },
+  {
+    path: '/login/',
+    component: LoginPage,
+  },
+  {
+    path:'/signup/',
+    component: SignupPage,
   },
 
   {

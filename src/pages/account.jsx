@@ -114,7 +114,7 @@ const AccountPage = () => {
       <BlockTitle>Security</BlockTitle>
       <List inset strong outline dividers>
         <ListItem link="#" title="Enable Two-Factor Authentication" />
-        <ListItem link="#" title="Logout" />
+        <ListItem link="/" title="Logout" />
       </List>
     </Page>
   );

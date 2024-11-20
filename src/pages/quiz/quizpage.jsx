@@ -252,7 +252,7 @@ const handleSubmitQuiz = () => {
     const score = (correctAnswers / quizData.length) * 100;
     f7.dialog.alert(`You scored ${score.toFixed(2)}%`, () => {
       f7.views.main.router.clearPreviousHistory()
-      f7.views.main.router.navigate("/", {
+      f7.views.main.router.navigate("/home/", {
         reloadCurrent: true,
       });      
     });
