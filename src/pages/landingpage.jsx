@@ -2,7 +2,7 @@ import React from "react";
 import { Page, Block, Button, ListItem, List, Icon } from "framework7-react";
 import Material from "./carousal/material";
 
-const Landing = () => {
+const LandingPage = () => {
   return (
     <Page className="landing-page">
       <Block strong inset outline>
@@ -71,4 +71,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default LandingPage;

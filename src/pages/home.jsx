@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Page, Link, Toolbar, Tabs, Tab, Navbar } from "framework7-react";
 
-import Landing from "./Landing";
+import Landing from "./landingpage";
 import AccountPage from "./account";
 
 const HomePage = () => (
