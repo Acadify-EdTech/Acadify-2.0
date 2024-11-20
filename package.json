@@ -1,8 +1,8 @@
 {
-  "name": "frontend",
+  "name": "Acadify",
   "private": true,
   "version": "1.0.0",
-  "description": "Frontend",
+  "description": "Acadify",
   "repository": "",
   "license": "UNLICENSED",
   "scripts": {

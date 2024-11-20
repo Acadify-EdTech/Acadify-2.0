@@ -5,20 +5,16 @@ import {
   f7ready,
   App,
   Panel,
-  Views,
   View,
   Popup,
   Page,
   Navbar,
-  Toolbar,
   NavRight,
   Link,
   Block,
-  BlockTitle,
   LoginScreen,
   LoginScreenTitle,
   List,
-  ListItem,
   ListInput,
   ListButton,
   BlockFooter
@@ -35,7 +31,7 @@ const MyApp = () => {
   const device = getDevice();
   // Framework7 Parameters
   const f7params = {
-    name: 'Frontend', // App name
+    name: 'Acadify', // App name
       theme: 'auto', // Automatic theme detection
       colors: {
         primary: '#ffb689',

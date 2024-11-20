@@ -5,13 +5,13 @@ const Material = () => {
     // Add the external CSS link
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "./pages/carousal/materialstyle.css";
+    link.href = "caraousal/materialstyle.css";
     document.head.appendChild(link);
 
     // Add the custom JS script
     const script = document.createElement("script");
     script.type = "module";
-    script.src = `./pages/carousal/materialscript.js?timestamp=${Date.now()}`; // Append timestamp to bypass cache
+    script.src = `caraousal/materialscript.js?timestamp=${Date.now()}`; // Append timestamp to bypass cache
     document.body.appendChild(script);
 
     // Ensure the script reinitializes the carousel

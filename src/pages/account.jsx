@@ -67,7 +67,7 @@ const AccountPage = () => {
     <Page>
       <Block className="display-flex flex-direction-column justify-content-center align-items-center">
         <img
-          src="./assets/image.jpg"
+          src="assets/image.jpg"
           alt="profile"
           className="tw-h-24 tw-w-24 tw-rounded-full"
         />

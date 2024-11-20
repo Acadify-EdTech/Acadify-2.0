@@ -1,7 +1,7 @@
 {
-  "name": "Frontend",
-  "short_name": "Frontend",
-  "description": "Frontend",
+  "name": "Acadify",
+  "short_name": "Acadify",
+  "description": "Acadify",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
