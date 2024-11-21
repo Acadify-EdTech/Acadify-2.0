@@ -60,7 +60,7 @@ const LandingPage = () => {
       <List inset strong dividers className="tw-mt-2">
         <ListItem>
           <p slot="title">TypeScript Advance</p>
-          <Button slot="after" tonal round>
+          <Button slot="after" tonal round href="/quiz/start/">
             Play Again
           </Button>
           <Icon
@@ -71,7 +71,7 @@ const LandingPage = () => {
         </ListItem>
         <ListItem>
           <p slot="title">Angular Basics</p>
-          <Button slot="after" tonal round>
+          <Button slot="after" tonal round href="/quiz/start/">
             Play Again
           </Button>
           <Icon
@@ -82,7 +82,7 @@ const LandingPage = () => {
         </ListItem>
         <ListItem>
           <p slot="title">React Basics</p>
-          <Button slot="after" tonal round>
+          <Button slot="after" tonal round href="/quiz/start/">
             Play Again
           </Button>
           <Icon slot="media" material="games" className="tw-text-red-400" />

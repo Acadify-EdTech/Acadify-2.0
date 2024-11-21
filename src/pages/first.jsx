@@ -2,28 +2,31 @@ import React, { useEffect, useState } from "react";
 import { Page, Block, f7 } from "framework7-react";
 
 const FirstPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(() =>
-    localStorage.getItem("loggedin") === "true"
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    () => localStorage.getItem("loggedin") === "true"
   );
 
   useEffect(() => {
-    const handleStorageChange = () => {
+    const handleNavigation = () => {
       const storedLoggin = localStorage.getItem("loggedin");
       const newIsLoggedIn = storedLoggin === "true";
       setIsLoggedIn(newIsLoggedIn);
 
-      // Navigate based on the new state
-      if (newIsLoggedIn) {
-        f7.views.main.router.navigate("/home/");
-      } else {
-        f7.views.main.router.navigate("/getstarted/");
-      }
+      // Splash timeout before navigation
+      setTimeout(() => {
+        if (newIsLoggedIn) {
+          f7.views.main.router.navigate("/home/");
+        } else {
+          f7.views.main.router.navigate("/getstarted/");
+        }
+      }, 1000); // 3 seconds splash timeout
     };
 
     // Run on component mount to check the current state
-    handleStorageChange();
+    handleNavigation();
 
     // Add event listener for storage changes
+    const handleStorageChange = () => handleNavigation();
     window.addEventListener("storage", handleStorageChange);
 
     // Cleanup event listener

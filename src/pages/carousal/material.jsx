@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "framework7-react";
 
 const Material = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const Material = () => {
       <div className="demo-slider border-2  bg-white">
         <div className="swiper ">
           <div className="swiper-wrapper">
-            <div className="swiper-slide">
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -53,7 +54,7 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="swiper-slide">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
