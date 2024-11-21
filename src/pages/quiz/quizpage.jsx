@@ -14,6 +14,7 @@ import {
   NavLeft,
   NavRight,
   f7,
+  Icon,
 } from "framework7-react";
 
 // Sample quiz data
@@ -194,6 +195,7 @@ const quizData = [
 const QUIZ_DURATION = 1800;
 
 export default function QuizPage() {
+  const setUsername = localStorage.getItem("username");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userAnswers, setUserAnswers] = useState(
     new Array(quizData.length).fill(null)
@@ -244,20 +246,22 @@ export default function QuizPage() {
   };
 
   // Submit quiz
-const handleSubmitQuiz = () => {
-  f7.dialog.confirm('Do you want to submit the Quiz?', () => {
-    const correctAnswers = quizData.reduce((total, question, index) => {
-      return question.correctAnswer === userAnswers[index] ? total + 1 : total;
-    }, 0);
-    const score = (correctAnswers / quizData.length) * 100;
-    f7.dialog.alert(`You scored ${score.toFixed(2)}%`, () => {
-      f7.views.main.router.clearPreviousHistory()
-      f7.views.main.router.navigate("/home/", {
-        reloadCurrent: true,
-      });      
+  const handleSubmitQuiz = () => {
+    f7.dialog.confirm("Do you want to submit the Quiz?", () => {
+      const correctAnswers = quizData.reduce((total, question, index) => {
+        return question.correctAnswer === userAnswers[index]
+          ? total + 1
+          : total;
+      }, 0);
+      const score = (correctAnswers / quizData.length) * 100;
+      f7.dialog.alert(`You scored ${score.toFixed(2)}%`, () => {
+        f7.views.main.router.clearPreviousHistory();
+        f7.views.main.router.navigate("/home/", {
+          reloadCurrent: true,
+        });
+      });
     });
-  });
-};
+  };
 
   // Timer effect
   useEffect(() => {
@@ -283,21 +287,21 @@ const handleSubmitQuiz = () => {
   };
 
   return (
+    
     <Page>
-      <Navbar>
-        {/* Timer on the left side */}
-        <NavLeft>
-          <Button outlinec round disabled className="tw-ml-2">
-            <span>{formatTime(timeLeft)}</span>
-          </Button>
-        </NavLeft>
-        {/* Submit button on the right side */}
-        <NavRight>
-          <Button onClick={handleSubmitQuiz} tonal round className="tw-mr-2">
-            Submit
-          </Button>
-        </NavRight>
-      </Navbar>
+      <div className="tw-flex tw-justify-between tw-mt-3">
+        <div className="tw-flex">
+        <Button tonal round className="tw-ml-2">
+          <span>{formatTime(timeLeft)}</span>
+        </Button>
+        <Button tonal round className="tw-ml-2">
+          <span>{`Q${currentQuestion + 1}/${quizData.length}`}</span>
+        </Button>
+        </div>
+        <Button onClick={handleSubmitQuiz} tonal round className="tw-mr-2">
+          Submit
+        </Button>
+      </div>
 
       <div className="grid grid-cols-1 large-grid-cols-2">
         <Block>

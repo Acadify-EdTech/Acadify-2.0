@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Page,
   Block,
@@ -12,6 +12,15 @@ import {
 
 const AccountPage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [username, setUsername] = useState("Guest");
+  const [email, setEmail] = useState("email@email.com");
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username");
+    const storedEmail = localStorage.getItem("email");
+    if (storedUsername) setUsername(storedUsername);
+    if (storedEmail) setEmail(storedEmail);
+  }, []);
 
   const openLanguageDialog = () => {
     f7.dialog
@@ -72,11 +81,9 @@ const AccountPage = () => {
           className="tw-h-24 tw-w-24 tw-rounded-full"
         />
         <p className="tw-mt-3 tw-text-2xl tw-font-sans tw-font-bold">
-          Harshit Shukla
+          {username}
         </p>
-        <p className="tw-text-sm tw-font-mono tw-text-gray-500">
-          hershitshukla35@gmail.com
-        </p>
+        <p className="tw-text-sm tw-font-mono tw-text-gray-500">{email}</p>
         <Button fill round className="tw-mt-4 tw-w-1/3">
           Edit Profile
         </Button>

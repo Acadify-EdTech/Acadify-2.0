@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Page, Block, Button, ListItem, List, Icon } from "framework7-react";
 import Material from "./carousal/material";
 
 const LandingPage = () => {
+  const [username, setUsername] = useState("Guest");
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username");
+    if (storedUsername) setUsername(storedUsername);
+  }, []);
+
   return (
-    <Page className="landing-page">
+    <Page>
       <Block strong inset outline>
         <p
           className="tw-text-4xl tw-mb-2 tw-font-cr"
           style={{ color: "var(--f7-md-primary)" }}
         >
-          👋 Hi Harshit,
+          👋 Hi {username},
         </p>
         <p
           className="tw-font-mono tw-text-lg"
@@ -53,17 +60,31 @@ const LandingPage = () => {
       <List inset strong dividers className="tw-mt-2">
         <ListItem>
           <p slot="title">TypeScript Advance</p>
-          <Button slot="after" tonal round>Play Again</Button>
-          <Icon slot="media" material="lightbulb" className="tw-text-fuchsia-400"/>
+          <Button slot="after" tonal round>
+            Play Again
+          </Button>
+          <Icon
+            slot="media"
+            material="lightbulb"
+            className="tw-text-fuchsia-400"
+          />
         </ListItem>
         <ListItem>
           <p slot="title">Angular Basics</p>
-          <Button slot="after" tonal round>Play Again</Button>
-          <Icon slot="media" material="smart_toy" className="tw-text-blue-400"/>
+          <Button slot="after" tonal round>
+            Play Again
+          </Button>
+          <Icon
+            slot="media"
+            material="smart_toy"
+            className="tw-text-blue-400"
+          />
         </ListItem>
         <ListItem>
           <p slot="title">React Basics</p>
-          <Button slot="after" tonal round>Play Again</Button>
+          <Button slot="after" tonal round>
+            Play Again
+          </Button>
           <Icon slot="media" material="games" className="tw-text-red-400" />
         </ListItem>
       </List>

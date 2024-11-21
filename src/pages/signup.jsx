@@ -15,7 +15,10 @@ const SignupPage = () => {
   const [password, setPassword] = useState("");
 
   const handleSignup = () => {
-    f7.views.main.router.navigate("/home/"); // Redirect to the home page after signing up
+    localStorage.setItem("username", username);
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+    f7.views.main.router.navigate("/home/"); 
   };
 
   return (
@@ -33,6 +36,7 @@ const SignupPage = () => {
           clearButton
           value={username}
           onInput={(e) => setUsername(e.target.value)}
+          autofocus
         >
           <Icon material="person" slot="media" />
         </ListInput>
