@@ -99,7 +99,13 @@ const MyApp = () => {
 
 
         {/* Your main view, should have "view-main" class */}
-        <View main className="safe-areas" url="/" />
+<View
+  main
+  className="safe-areas"
+  url="/"
+  iosSwipeBack={true} // Enable for iOS-like swipe-back
+  androidSwipeBack={true} // Enable for Android-like swipe-back
+/>
 
       {/* Popup */}
       <Popup id="my-popup">
