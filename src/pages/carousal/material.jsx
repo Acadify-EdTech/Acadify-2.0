@@ -55,7 +55,7 @@ const Material = () => {
                 </div>
               </div>
             </Link>
-            <div className="swiper-slide">
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -75,8 +75,8 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </Link>
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -96,8 +96,8 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </Link>
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -117,8 +117,8 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </Link>
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -138,8 +138,8 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </Link>
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -159,8 +159,8 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="swiper-slide">
+            </Link>
+            <Link className="swiper-slide" href="/quiz/start/">
               <div className="swiper-material-wrapper">
                 <div className="swiper-material-content">
                   <img
@@ -180,7 +180,7 @@ const Material = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
