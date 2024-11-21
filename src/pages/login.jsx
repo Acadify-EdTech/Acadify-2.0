@@ -27,7 +27,7 @@ const LoginPage = () => {
       return;
     }
     
-    localStorage.setItem("username", username);
+    localStorage.setItem("loggedin", true);
     f7.views.main.router.navigate("/home/");
   };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Navbar, Block, BlockTitle, List, ListItem, Button } from 'framework7-react';
+import { Page, Block, Button } from 'framework7-react';
 
 const GetStartedPage = () => {
     return (

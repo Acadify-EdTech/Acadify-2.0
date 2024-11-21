@@ -18,6 +18,7 @@ const SignupPage = () => {
     localStorage.setItem("username", username);
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
+    localStorage.setItem("loggedin", true);
     f7.views.main.router.navigate("/home/"); 
   };
 

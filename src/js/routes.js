@@ -13,10 +13,15 @@ import QuizPage from '../pages/quiz/quizpage.jsx';
 import GetStartedPage from '../pages/getstarted.jsx';
 import LoginPage from '../pages/login.jsx';
 import SignupPage from '../pages/signup.jsx';
+import FirstPage from '../pages/first.jsx';
 
 var routes = [
   {
     path: '/',
+    component: FirstPage,
+  },
+  {
+    path: '/getstarted/',
     component: GetStartedPage,
   },
   {

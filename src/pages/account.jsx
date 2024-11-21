@@ -72,6 +72,11 @@ const AccountPage = () => {
       .open();
   };
 
+  const handleLogout = () => {
+    localStorage.setItem("loggedin", false);
+    f7.views.main.router.navigate("/");
+  };
+
   return (
     <Page>
       <Block className="display-flex flex-direction-column justify-content-center align-items-center">
@@ -121,7 +126,7 @@ const AccountPage = () => {
       <BlockTitle>Security</BlockTitle>
       <List inset strong outline dividers>
         <ListItem link="#" title="Enable Two-Factor Authentication" />
-        <ListItem link="/" title="Logout" />
+        <ListItem link="#" title="Logout" onClick={handleLogout} />
       </List>
     </Page>
   );
