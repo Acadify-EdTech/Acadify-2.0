@@ -74,7 +74,7 @@ const AccountPage = () => {
 
   const handleLogout = () => {
     localStorage.setItem("loggedin", false);
-    f7.views.main.router.navigate("/");
+    f7.views.main.router.navigate("/", { reloadAll: true });
   };
 
   return (
